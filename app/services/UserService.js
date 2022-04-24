@@ -11,6 +11,9 @@ class UserService {
         //return user.username = newUsername
         user.username = newUsername //Porque funciona igual sin el return
     }
+    static getAllUsernames(objectList){
+        return objectList.map(user => user.username)
+    }
 }
 
 module.exports = UserService
