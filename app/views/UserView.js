@@ -8,7 +8,8 @@ class UserView {
         else if(typeof payload.username !== 'string' || typeof payload.name !== 'string' || typeof payload.id !== 'number'){
             return {error: "necesitan tener un valor valido"}
         }
-        return {error: "Todo bien"}
+        //return {error: "Todo bien"}
+        return UserService.create(payload.id, payload.username, payload.name, "Sin bio")
     }
 }
 
